@@ -77,8 +77,10 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'django_dz',
+        'USER': 'postgres',
+        'PASSWORD': 'saada',
     }
 }
 
@@ -117,10 +119,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'catalog/static/'
+STATIC_URL = 'static/'
 
 # STATICFILES_DIRS = (
-#     BASE_DIR / 'static/',
+#     BASE_DIR / 'catalog/static/',
 # )
 
 # Default primary key field type
