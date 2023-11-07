@@ -108,5 +108,57 @@
       "created_at": "2023-10-28T16:14:25Z",
       "last_change": "2023-10-28T16:14:27Z"
     }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 7,
+    "fields": {
+      "name": "Меню другое 2",
+      "description": "Различное расположение меню",
+      "image": "",
+      "category_id": 4,
+      "price": 290,
+      "created_at": "2023-10-28T16:14:25Z",
+      "last_change": "2023-10-28T16:14:27Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 8,
+    "fields": {
+      "name": "Меню другое 3",
+      "description": "Различное расположение меню",
+      "image": "",
+      "category_id": 4,
+      "price": 290,
+      "created_at": "2023-10-28T16:14:25Z",
+      "last_change": "2023-10-28T16:14:27Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 9,
+    "fields": {
+      "name": "Меню другое 4",
+      "description": "Различное расположение меню",
+      "image": "",
+      "category_id": 4,
+      "price": 290,
+      "created_at": "2023-10-28T16:14:25Z",
+      "last_change": "2023-10-28T16:14:27Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 10,
+    "fields": {
+      "name": "Меню другое 5",
+      "description": "Различное расположение меню",
+      "image": "",
+      "category_id": 4,
+      "price": 290,
+      "created_at": "2023-10-28T16:14:25Z",
+      "last_change": "2023-10-28T16:14:27Z"
+    }
   }
 ]

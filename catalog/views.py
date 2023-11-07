@@ -1,15 +1,21 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.core.paginator import Paginator
 
 from catalog.models import Product
 
 
 def get_index(request):
     products_list = Product.objects.all()
+
+    paginator = Paginator(products_list, 2)
+    page_number = request.GET.get("page")
+    page_obj = paginator.get_page(page_number)
+
     context = {
-        'object_list': products_list,
         'title': 'Каталог товаров - MyStore',
         'section_name': 'Каталог',
+        "page_obj": page_obj
     }
 
     return render(request, 'catalog/index.html', context)

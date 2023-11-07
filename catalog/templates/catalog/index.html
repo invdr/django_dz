@@ -2,7 +2,7 @@
 {% block content %}
 
     <div class="row text-center">
-        {% for product in object_list %}
+        {% for product in page_obj %}
             <div class="col-6">
                 <div class="card mb-4 box-shadow">
                     <div class="card-header">
@@ -22,4 +22,5 @@
             </div>
         {% endfor %}
     </div>
+    {% include 'catalog/includes/inc_pagination.html' %}
 {% endblock %}

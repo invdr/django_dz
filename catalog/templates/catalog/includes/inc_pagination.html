@@ -1,0 +1,28 @@
+<nav aria-label="navig">
+    <ul class="nav justify-content-center">
+        {% if page_obj.has_previous %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ page_obj.previous_page_number }}" tabindex="-1">Previous</a>
+            </li>
+
+            <li class="page-item"><a class="page-link" href="?page=1">1</a></li>
+        {% endif %}
+
+        <li class="page-item active">
+            <span class="page-link">
+                {{ page_obj.number }}
+                <span class="sr-only">(current)</span>
+            </span>
+        </li>
+
+        {% if page_obj.has_next %}
+            <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a></li>
+
+            <li class="page-item">
+                <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+            </li>
+        {% endif %}
+
+    </ul>
+<br /><p style="text-align: center">Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}</p>
+</nav>
