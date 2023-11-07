@@ -8,13 +8,12 @@ class Category(models.Model):
     description = models.TextField(verbose_name="Описание")
 
     def __str__(self):
-        return f"{self.name}"
+        return self.name
 
     class Meta:
         verbose_name = "категория"
         verbose_name_plural = "категории"
         ordering = ['pk']
-
 
 
 class Product(models.Model):
@@ -27,7 +26,7 @@ class Product(models.Model):
     last_change = models.DateTimeField(verbose_name="Дата изменения")
 
     def __str__(self):
-        return f"{self.name} ({self.category_id.name})"
+        return self.name
 
     class Meta:
         verbose_name = "продукт"

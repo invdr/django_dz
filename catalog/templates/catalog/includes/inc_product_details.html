@@ -1,0 +1,28 @@
+{% load path_tags %}
+<div class="row text-start">
+    <div class="col-lg-12 col-md-6 col-sm-12">
+        <div class="card mb-4 box-shadow">
+            <div class="card-body">
+                <div class="card-header"><h1>{{ product_info.name }}</h1></div>
+                <table class="table table-striped">
+                    <img src="{% mediapath product_info.image %}" width="300" height="300" class="mx-auto d-block img-thumbnail" alt="Image" />
+                    <tr>
+                        <td class="w-25">Описание</td>
+                        <td>{{ product_info.description|truncatechars:100 }}</td>
+                    </tr>
+                    <tr>
+                        <td class="w-25">Цена</td>
+                        <td>$ {{ product_info.price }}</td>
+                    </tr>
+                    <tr>
+                        <td class="w-25">Категория товара</td>
+                        <td>{{ product_info.category_id }}</td>
+                    </tr>
+                </table>
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary">Купить</button>
+
+            </div>
+        </div>
+    </div>
+
+</div>
