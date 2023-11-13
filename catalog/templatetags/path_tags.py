@@ -6,4 +6,4 @@ register = template.Library()
 def mediapath(path):
     if path:
         return f"/media/{path}"
-    return f"/media/product_images/no_photo.jpg"
+    return f"/media/no_photo.jpg"
