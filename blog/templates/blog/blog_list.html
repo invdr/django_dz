@@ -19,8 +19,8 @@
                         <ul class="list-unstyled mt-3 mb-4 text-start m-3">
                             <li>{{ article.content|truncatechars:500 }}</li>
                         </ul>
-                        <div class="d-block justify-content-between align-items-center">
-                            <div class="btn-group">
+                        <div class="d-block align-items-center">
+                            <div class="btn-group" role="group" aria-label="Basic outlined example">
                                 <a href="{% url 'blog:article' article.pk %}">
                                     <button class="btn btn-outline-dark" type="button">Подробнее</button>
                                 </a>
@@ -32,11 +32,11 @@
                                 </a>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         {% endfor %}
     </div>
     {% include 'catalog/includes/inc_pagination.html' %}
+
 {% endblock %}
